@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="8dp"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:srcCompat="@drawable/dd_logo" />
+
+    <Space android:layout_width="match_parent"
+        android:layout_height="30dp"></Space>
+
+    <TextView
+        android:id="@+id/tvFoodName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hamburger"
+        android:editable="true"
+        tools:layout_editor_absoluteX="176dp"
+        tools:layout_editor_absoluteY="283dp" />
+
+    <Space android:layout_width="match_parent"
+        android:layout_height="30dp"></Space>
+
+    <EditText
+        android:id="@+id/editTextFoodName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:editable="true"
+        android:inputType="textPersonName"
+        android:text="Add new food..."
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="460dp"/>
+
+    <Space android:layout_width="match_parent"
+        android:layout_height="30dp"></Space>
+
+    <Button
+        android:id="@+id/btnAddFood"
+        android:layout_width="211dp"
+        android:layout_height="39dp"
+        android:text="ADD FOOD"
+        android:onClick="onAddFood"
+        tools:layout_editor_absoluteX="99dp"
+        tools:layout_editor_absoluteY="525dp" />
+
+    <Space android:layout_width="match_parent"
+        android:layout_height="30dp"></Space>
+
+    <Button
+        android:id="@+id/btnDecide"
+        android:layout_width="403dp"
+        android:layout_height="49dp"
+        android:text="DECIDE!"
+        android:onClick="onDecideClick"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="682dp" />
+
+</LinearLayout>
