@@ -6,16 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".HomeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-<!--    <TextView-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:text="@string/hello_blank_fragment" />-->
-
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="188dp"
-        android:layout_height="165dp"
+        android:layout_width="168dp"
+        android:layout_height="147dp"
         android:layout_marginTop="80dp"
         android:src="@drawable/anil_chaulagain___square"
         app:layout_constraintEnd_toEndOf="parent"
@@ -29,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="112dp"
         android:text="Anil Chaulagain"
-        android:textSize="20sp"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.392"
         app:layout_constraintStart_toEndOf="@+id/imageView"
@@ -40,29 +34,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="108dp"
+        android:layout_marginEnd="96dp"
         android:text="Software Engineer"
-        android:textSize="8sp"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/tvName" />
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="361dp"
-        android:layout_height="73dp"
-        android:layout_marginTop="36dp"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/homeFragmentRecyclerView"
+        android:layout_width="339dp"
+        android:layout_height="429dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.409"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView">
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Career Note" />
-
-    </androidx.cardview.widget.CardView>
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
