@@ -1,20 +1,18 @@
 package com.example.cv1.adapter
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.cv1.R
-import com.example.cv1.model.HomeInfo
+import com.example.cv1.model.CardItemModel
 
 
-class HomeInfoAdapter(
+class CardItemAdapter(
     //private val context: Context,
-    private val dataset: List<HomeInfo>
-) : RecyclerView.Adapter<HomeInfoAdapter.ItemViewHolder>() {
+    private val dataset: List<CardItemModel>
+) : RecyclerView.Adapter<CardItemAdapter.ItemViewHolder>() {
 
     class ItemViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
         val tvHomeInfoTitle: TextView = view.findViewById(R.id.tvHomeInfoTitle)
@@ -24,7 +22,7 @@ class HomeInfoAdapter(
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
         // create a new view
         val adapterLayout = LayoutInflater.from(parent.context)
-            .inflate(R.layout.activity_home_info_item, parent, false)
+            .inflate(R.layout.activity_card_item, parent, false)
 
         return ItemViewHolder(adapterLayout)
     }
