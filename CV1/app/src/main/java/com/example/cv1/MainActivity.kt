@@ -1,7 +1,14 @@
 package com.example.cv1
 
+import android.annotation.SuppressLint
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
+import androidx.appcompat.view.menu.MenuBuilder
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
@@ -41,5 +48,35 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }.attach()
+    }
+
+    @SuppressLint("RestrictedApi")
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.main_menu, menu);
+
+        return true;
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        var url: String = "";
+        url = when (item.itemId) {
+            R.id.m1 -> {
+                "https://www.linkedin.com/in/anil-chaulagain/"
+            }
+            R.id.m2 -> {
+                "https://github.com/anilchaulagain25";
+            }
+            R.id.m3 -> {
+                "https://anilchaulagain.com.np/";
+            }
+            else -> {
+                throw Error("Menu click action not implemented");
+            }
+
+        }
+        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+        startActivity(intent)
+
+        return super.onOptionsItemSelected(item)
     }
 }
