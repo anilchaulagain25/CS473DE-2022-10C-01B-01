@@ -46,6 +46,7 @@ class CardItemWithImageAdapter(
         holder.tvDescriptionCardWidget.text = item.description
         holder.ivImageCardWidget.setImageResource(item.imgId)
 
+
         if (item.additionalData != null) {
             holder.ivImageCardWidget.setOnClickListener {
                 val data: AdditionalData = item.additionalData!!

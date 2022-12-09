@@ -1,7 +1,9 @@
 package com.example.cv1
 
+import android.Manifest
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,11 +11,15 @@ import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import androidx.appcompat.view.menu.MenuBuilder
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 
 class MainActivity : AppCompatActivity() {
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -30,21 +36,21 @@ class MainActivity : AppCompatActivity() {
             when (position) {
                 0 -> {
                     tab.text = "Home"
-                    //tab.setIcon(R.drawable.home)
+                    tab.setIcon(R.drawable.home)
                 }
                 1 -> {
                     tab.text = "ABOUT ME"
-                    //tab.setIcon(R.drawable.home)
+                    tab.setIcon(R.drawable.about_me)
                 }
 
                 2 -> {
                     tab.text = "WORK"
-                    //tab.setIcon(R.drawable.home)
+                    tab.setIcon(R.drawable.work)
                 }
 
                 3 -> {
                     tab.text = "CONTACT"
-                    //tab.setIcon(R.drawable.home)
+                    tab.setIcon(R.drawable.contact)
                 }
             }
         }.attach()

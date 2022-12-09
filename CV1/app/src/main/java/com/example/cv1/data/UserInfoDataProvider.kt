@@ -10,10 +10,10 @@ import com.example.cv1.model.UserInfo
 class UserInfoDataProvider {
     private val userInfo = arrayListOf(
         UserInfo(
-            "achaulagain@miu.edu", "Anil123$"
+            "achaulagain@miu.edu", "anil123"
         ),
         UserInfo(
-            "prajitaregmi25@gmail.com", "Prajita123$"
+            "prajitaregmi25@gmail.com", "prajita123"
         ),
     )
 
