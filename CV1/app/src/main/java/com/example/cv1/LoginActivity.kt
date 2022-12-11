@@ -11,7 +11,10 @@ import com.example.cv1.model.Constants
 import com.example.cv1.model.Constants.isLoggedIn
 import com.example.cv1.model.Constants.sharedPreferenceName
 import com.example.cv1.model.Constants.userEmail
+import com.example.cv1.model.Constants.userId
+import com.example.cv1.model.Constants.userName
 import com.example.cv1.model.Constants.userPwd
+import com.example.cv1.model.Constants.userTitle
 import com.example.cv1.model.UserInfo
 import java.util.*
 
@@ -35,11 +38,19 @@ class LoginActivity : AppCompatActivity() {
         finish()
     }
 
-    private fun initSharedPref(username: String?, isLoggedInUser: Boolean) {
-        UserInfoDataProvider().userInfo()
+    private fun initSharedPref(
+        username: String?,
+        isLoggedInUser: Boolean,
+        name: String? = null,
+        id: Int? = null,
+        title: String? = null,
+    ) {
         val sharedPref = getSharedPreferences(sharedPreferenceName, 0)
         val editor = sharedPref.edit()
         editor.putString(userEmail, username)
+        editor.putString(userName, name)
+        editor.putString(userTitle, title)
+        editor.putString(userId, id.toString())
         editor.putBoolean(isLoggedIn, isLoggedInUser)
         editor.apply()
     }
@@ -69,7 +80,9 @@ class LoginActivity : AppCompatActivity() {
             Toast.makeText(this, "Invalid Credentials", Toast.LENGTH_SHORT).show();
             return;
         } else {
-            initSharedPref(email,true);
+            initSharedPref(
+                email, true, userInfo.name, userInfo.id, userInfo.title
+            );
             openMainPage();
         }
     }

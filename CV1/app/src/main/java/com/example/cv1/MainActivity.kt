@@ -1,21 +1,22 @@
 package com.example.cv1
 
-import android.Manifest
 import android.annotation.SuppressLint
 import android.content.Intent
-import android.content.pm.PackageManager
+import android.icu.util.Calendar
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
-import android.view.MenuInflater
 import android.view.MenuItem
-import androidx.appcompat.view.menu.MenuBuilder
-import androidx.core.app.ActivityCompat
-import androidx.core.content.ContextCompat
+import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
+import com.example.cv1.model.Constants
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
+import java.nio.file.Paths.get
+import java.time.DateTimeException
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -54,6 +55,13 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }.attach()
+
+        val sharedPref = getSharedPreferences(Constants.sharedPreferenceName, 0);
+        var name = sharedPref.getString(Constants.userName, null);
+        var title = sharedPref.getString(Constants.userTitle, null);
+
+        val tvGreeting: TextView = findViewById<TextView>(R.id.tvGreeting)
+        tvGreeting.text = "Howdy, $name ($title)";
     }
 
     @SuppressLint("RestrictedApi")
