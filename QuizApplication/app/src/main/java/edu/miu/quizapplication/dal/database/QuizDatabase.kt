@@ -26,6 +26,7 @@ abstract class QuizDatabase : RoomDatabase() {
                 )
                     .fallbackToDestructiveMigration()
                     .addCallback(roomCallback)
+                    .allowMainThreadQueries()
                     .build()
 
             return instance!!

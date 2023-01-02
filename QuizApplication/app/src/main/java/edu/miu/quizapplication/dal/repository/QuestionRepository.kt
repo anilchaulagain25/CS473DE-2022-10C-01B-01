@@ -9,7 +9,7 @@ import edu.miu.quizapplication.dal.models.Question
 class QuestionRepository(application: Application) {
 
     private var noteDao: QuizDAO
-    private var allNotes: LiveData<List<Question>>
+    private var allNotes: List<Question>
 
     private val database = QuizDatabase.getInstance(application)
 
@@ -17,7 +17,11 @@ class QuestionRepository(application: Application) {
         noteDao = database.noteDao()
         allNotes = noteDao.getAllQuestions()
     }
-    fun getAllQuestions(): LiveData<List<Question>> {
-        return allNotes
+    fun getAllQuestions(): List<Question> {
+        return noteDao.getAllQuestions()
+    }
+
+    fun updateUserAnswer(questionId: Int, userAnswer: Int) {
+        noteDao.updateUserAnswer(questionId,userAnswer);
     }
 }

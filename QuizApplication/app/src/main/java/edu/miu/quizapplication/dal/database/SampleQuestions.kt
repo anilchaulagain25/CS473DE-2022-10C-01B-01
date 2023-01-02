@@ -13,7 +13,7 @@ class SampleQuestions {
                     option_two = "A type of fish",
                     option_three = "A car model",
                     option_four = "A music genre",
-                    correct_answer = "A programming language",
+                    correct_answer = "1",
                     user_answer = ""
                 ),
                 Question(
@@ -23,7 +23,7 @@ class SampleQuestions {
                     option_two = "val myVariable: Int = 10",
                     option_three = "let myVariable = 10",
                     option_four = "const myVariable = 10",
-                    correct_answer = "val myVariable: Int = 10",
+                    correct_answer = "2",
                     user_answer = ""
                 ),
                 Question(
@@ -33,7 +33,7 @@ class SampleQuestions {
                     option_two = "Improved syntax and readability",
                     option_three = "Reduced boilerplate code",
                     option_four = "All of the above",
-                    correct_answer = "All of the above",
+                    correct_answer = "4",
                     user_answer = ""
                 ),
                 Question(
@@ -43,7 +43,7 @@ class SampleQuestions {
                     option_two = "A way to store data, created using the 'struct' keyword",
                     option_three = "A way to organize code, created using the 'namespace' keyword",
                     option_four = "A way to define functions, created using the 'function' keyword",
-                    correct_answer = "A template for creating objects, created using the 'class' keyword",
+                    correct_answer = "1",
                     user_answer = ""
                 ),
                 Question(
@@ -53,7 +53,7 @@ class SampleQuestions {
                     option_two = "Using the 'function' keyword",
                     option_three = "Using the 'fun' keyword",
                     option_four = "Using the 'method' keyword",
-                    correct_answer = "Using the 'fun' keyword",
+                    correct_answer = "3",
                     user_answer = ""
                 ),
 
@@ -64,7 +64,7 @@ class SampleQuestions {
                     option_two = "A class is a way to store data, while an object is a way to organize code",
                     option_three = "A class is a way to define functions, while an object is a way to create variables",
                     option_four = "There is no difference between a class and an object in Kotlin",
-                    correct_answer = "A class is a template for creating objects, while an object is a specific instance of a class",
+                    correct_answer = "1",
                     user_answer = ""
                 ),
                 Question(
@@ -74,7 +74,7 @@ class SampleQuestions {
                     option_two = "Method which has more than 10 lines",
                     option_three = "A function that extends the functionality of a class without modifying the class itself",
                     option_four = "Method which throws exception",
-                    correct_answer = "A function that extends the functionality of a class without modifying the class itself",
+                    correct_answer = "3",
                     user_answer = ""
                 ),
                 Question(
@@ -84,7 +84,7 @@ class SampleQuestions {
                     option_two = "By writing NullableType",
                     option_three = "Don't need to do anything",
                     option_four = "By putting @Nullable annotation",
-                    correct_answer = "By appending a '?' to the type, such as Int?",
+                    correct_answer = "1",
                     user_answer = ""
                 ),
                 Question(
@@ -94,7 +94,7 @@ class SampleQuestions {
                     option_two = "2015",
                     option_three = "2016",
                     option_four = "2017",
-                    correct_answer = "2016",
+                    correct_answer = "3",
                     user_answer = ""
                 ),
                 Question(
@@ -104,7 +104,7 @@ class SampleQuestions {
                     option_two = "A type of smartphone",
                     option_three = "A programming language",
                     option_four = "A software development kit",
-                    correct_answer = "A mobile operating system developed by Google",
+                    correct_answer = "1",
                     user_answer = ""
                 ),
                 Question(
@@ -114,7 +114,7 @@ class SampleQuestions {
                     option_two = "A class that handles user input",
                     option_three = "A component that represents a single screen in an app",
                     option_four = "All of the above",
-                    correct_answer = "A component that represents a single screen in an app",
+                    correct_answer = "3",
                     user_answer = ""
                 ),
                 Question(
@@ -124,9 +124,10 @@ class SampleQuestions {
                     option_two = "A class that handles user input",
                     option_three = "A component that represents a single screen in an app",
                     option_four = "A way to store data in an app",
-                    correct_answer = "A component that performs long-running tasks in the background",
+                    correct_answer = "1",
                     user_answer = ""
                 ),
+
                 Question(
                     id = 14,
                     question = "What is an Android broadcast receiver?",
@@ -134,17 +135,7 @@ class SampleQuestions {
                     option_two = "A component that performs long-running tasks in the background",
                     option_three = "A component that represents a single screen in an app",
                     option_four = "A way to store data in an app",
-                    correct_answer = "A component that receives and responds to system-wide broadcast announcements",
-                    user_answer = ""
-                ),
-                Question(
-                    id = 14,
-                    question = "What is an Android broadcast receiver?",
-                    option_one = "A component that receives and responds to system-wide broadcast announcements",
-                    option_two = "A component that performs long-running tasks in the background",
-                    option_three = "A component that represents a single screen in an app",
-                    option_four = "A way to store data in an app",
-                    correct_answer = "A component that receives and responds to system-wide broadcast announcements",
+                    correct_answer = "1",
                     user_answer = ""
                 ),
                 Question(
@@ -154,7 +145,7 @@ class SampleQuestions {
                     option_two = "False",
                     option_three = "It was True now False",
                     option_four = "It was False now True",
-                    correct_answer = "True",
+                    correct_answer = "1",
                     user_answer = ""
                 ),
                 // add 10 more questions here

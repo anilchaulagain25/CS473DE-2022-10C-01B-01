@@ -12,8 +12,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical"
-        android:padding="16dp"
-        >
+        android:padding="16dp">
 
         <TextView
             android:id="@+id/tv_question"
@@ -21,10 +20,9 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:gravity="center"
-            android:text="Which internet company began life as an online bookstore called &#039;Cadabra&#039;?"
+            android:text=""
             android:textColor="#363A43"
-            android:textSize="22sp">
-        </TextView>
+            android:textSize="22sp"></TextView>
 
         <LinearLayout
             android:id="@+id/ll_progress_details"
@@ -43,8 +41,7 @@
                 android:indeterminate="false"
                 android:max="10"
                 android:minHeight="50dp"
-                android:progress="0">
-            </ProgressBar>
+                android:progress="0"></ProgressBar>
 
             <TextView
                 android:id="@+id/tv_progress"
@@ -54,8 +51,7 @@
                 android:padding="15dp"
                 android:textColorHint="#7A8089"
                 android:textSize="14sp"
-                tools:text="0/10">
-            </TextView>
+                tools:text="0/10"></TextView>
 
         </LinearLayout>
 
@@ -66,11 +62,11 @@
             android:layout_margin="10dp"
             android:background="@drawable/default_option_border_bg"
             android:gravity="center"
+            android:onClick="onOptionClick"
             android:padding="15dp"
-            android:textColor="#7A8089"
+            android:textColor="@color/black"
             android:textSize="18sp"
-            tools:text="Apple">
-        </TextView>
+            tools:text=""></TextView>
 
         <TextView
             android:id="@+id/tv_option_two"
@@ -79,11 +75,12 @@
             android:layout_margin="10dp"
             android:background="@drawable/default_option_border_bg"
             android:gravity="center"
+            android:onClick="onOptionClick"
             android:padding="15dp"
-            android:textColor="#7A8089"
+            android:textColor="@color/black"
             android:textSize="18sp"
-            tools:text="Apple">
-        </TextView>
+
+            tools:text=""></TextView>
 
         <TextView
             android:id="@+id/tv_option_three"
@@ -92,11 +89,12 @@
             android:layout_margin="10dp"
             android:background="@drawable/default_option_border_bg"
             android:gravity="center"
+            android:onClick="onOptionClick"
             android:padding="15dp"
-            android:textColor="#7A8089"
+            android:textColor="@color/black"
             android:textSize="18sp"
-            tools:text="Apple">
-        </TextView>
+
+            tools:text=""></TextView>
 
         <TextView
             android:id="@+id/tv_option_four"
@@ -105,22 +103,31 @@
             android:layout_margin="10dp"
             android:background="@drawable/default_option_border_bg"
             android:gravity="center"
+            android:onClick="onOptionClick"
             android:padding="15dp"
-            android:textColor="#7A8089"
+            android:textColor="@color/black"
             android:textSize="18sp"
-            tools:text="Apple">
-        </TextView>
+
+            tools:text=""></TextView>
 
         <Button
             android:id="@+id/btn_submit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="@string/submit_button"
+            android:text="Next"
+            android:onClick="onNextClick"
             android:textColor="@android:color/white"
             android:textSize="18sp"
-            android:textStyle="bold">
-        </Button>
+            android:textStyle="bold"></Button>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="365dp"
+            android:layout_height="37dp"
+            android:background="#773232"
+            android:onClick="gotoHome"
+            android:text="Home" />
 
     </LinearLayout>
 </ScrollView>
