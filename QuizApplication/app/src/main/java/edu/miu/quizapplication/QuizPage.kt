@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.ProgressBar
 import android.widget.TextView
+import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProviders
 import edu.miu.quizapplication.dal.models.Question
@@ -22,13 +23,6 @@ class QuizPage : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quiz_page)
         vm = ViewModelProviders.of(this)[QuizViewModel::class.java]
-
-//        vm.allQuestions().observe(this) {
-//            questions = it
-//            fillQuestion(questions[0])
-//            totalQuestionCount = questions.size
-//            fillProgressBar();
-//        }
 
         vm.getQuestion().observe(this) {
             if (it == null) {
@@ -114,21 +108,12 @@ class QuizPage : AppCompatActivity() {
 
 
     fun onNextClick(view: View) {
-        vm.submitUserAnswer(questionId, userAnswer);
-        resetSelectedOptions()
-//        if (step == totalQuestionCount - 10) {
-//            startActivity(Intent(this, ResultPage::class.java))
-//        } else {
-//            this.questionId = questions[step].id;
-//            this.userAnswer = this.userAnswer;
-//
-//            this.vm.updateUserAnswer(questionId, userAnswer);
-//            step++;
-//            val currentQuestion = questions[step];
-//            fillQuestion(currentQuestion)
-//
-//            resetSelectedOptions()
-//            fillProgressBar();
-//        }
+        if (userAnswer == 0) {
+            Toast.makeText(this, "Please select option", Toast.LENGTH_SHORT).show()
+        } else {
+            vm.submitUserAnswer(questionId, userAnswer);
+            resetSelectedOptions()
+            this.userAnswer = 0
+        }
     }
 }
